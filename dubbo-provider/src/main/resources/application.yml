@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+    address: zookeeper://hadoop11:2181?backup=hadoop12:2181,hadoop13:2181
+  provider:
+    timeout: 600000
+  consumer:
+    timeout: 600000
+  protocol:
+    port: 20880
+    name: tri

@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: dubbo-consumer
+
+
+dubbo:
+  application:
+    name: dubbo-consumer
+  registry:
+    address: zookeeper://hadoop12:2181?backup=hadoop11:2181,hadoop10:2181
+  provider:
+    timeout: 600000
+  consumer:
+    timeout: 600000
+  protocol:
+    port: 20883
+    name: tri
+
+
+
+logging:
+  level:
+    org.apache.dubbo: DEBUG
+
